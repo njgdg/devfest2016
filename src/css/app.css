@@ -1,6 +1,16 @@
-/*
- * Globals
- */
+/* fn utils */
+.fn-fs-serif {
+  font-family: serif !important;
+}
+
+/* modal */
+.modal-dialog {
+  margin-top: 15%;
+}
+.modal-content {
+  text-align: center;
+  border-radius: 2px;
+}
 
 /* Links */
 a,
@@ -10,6 +20,9 @@ a:hover {
 }
 
 /* Custom default button */
+.btn {
+  border-radius: 2px;
+}
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
@@ -19,21 +32,14 @@ a:hover {
   border: 1px solid #fff;
 }
 
-
 /*
  * Base structure
  */
-
 html,
 body {
   height: 100%;
   background-color: #333;
   font-family: tahoma, arial, 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', '\5b8b\4f53', sans-serif;
-}
-body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -44,6 +50,8 @@ body {
   min-height: 100%;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  background: url(../img/banner-1-1.jpg) center center no-repeat;
+  background-size: cover;
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -52,6 +60,9 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 /* Padding for spacing */
@@ -114,8 +125,8 @@ body {
   padding: 0 20px;
 }
 .cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
+  padding: 8px 20px;
+  font-weight: normal;
 }
 
 
