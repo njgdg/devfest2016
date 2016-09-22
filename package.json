@@ -1,0 +1,11 @@
+{
+  "name": "devfest2016",
+  "version": "0.1.0",
+  "description": "Devfest 2016 Website of NanjingGDG.",
+  "author": "zhangyang",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^1.12.4"
+  }
+}
