@@ -1,0 +1,259 @@
+/* fn utils */
+.fn-fs-serif {
+  font-family: serif !important;
+}
+.fn-black {
+  color: #000;
+}
+.fn-bold {
+  font-weight: bold;
+}
+
+/* modal */
+.modal-dialog {
+  margin-top: 15%;
+}
+.modal-content {
+  text-align: center;
+  border-radius: 2px;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn {
+  border-radius: 4px;
+}
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.btn-default:hover {
+  background-color: #eee;
+}
+
+
+/*
+ * Base structure
+ */
+html,
+body {
+  height: 100%;
+  font-family: tahoma, arial, 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', '\5b8b\4f53', sans-serif;
+}
+body {
+  background: #333 url(../img/banner-1-1.jpg) center center no-repeat fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.site-wrapper-1 {
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  /*background: url(../img/banner-1-1.jpg) center 0 no-repeat;*/
+  background-size: cover;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+.site-wrapper-1 .site-wrapper-inner {
+  background-color: rgba(0,0,0,0);
+}
+.sw-2 {
+  background: #fff;
+  box-shadow: none;
+  color: #555;
+  font-size: 15px;
+}
+.sw-3 {
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  /*background: url(../img/screen-1.jpg) center 0 no-repeat;*/
+  background-size: cover;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+.sw-4 {
+  color: #fff;
+  background-color: #222;
+}
+.sw-4 img {
+  display: block;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+}
+.sw-4 h4 {
+  font-weight: normal;
+  font-size: 16px;
+  color: #fff;
+}
+.sw-4 p {
+  color: #ccc;
+  font-size: 14px;
+  margin: 0;
+}
+.map-wrap {
+  height: 50%;
+}
+.ctn,
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  line-height: 1.8;
+  padding: 0 10px;
+}
+.ctn h1,
+.cover-container h1 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 8px 22px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+.page-footer {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+  text-align: center;
+  background-color: #000;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.page-footer p {
+  margin: 0;
+}
+
+/*
+ * preload
+ */
+.preload {
+  position: absolute;
+  left: 9999px;
+  height: 0;
+  overflow: hidden;
+}
+
+
+/*
+ * Affix and center
+ */
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: absolute;
+    top: 0;
+  }
+  .mastfoot {
+    position: absolute;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}
