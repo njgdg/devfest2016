@@ -94,7 +94,7 @@ body {
 }
 .sw-4 {
   color: #fff;
-  background-color: #222;
+  background-color: rgba(0,0,0,.7);
 }
 .sw-4 img {
   display: block;

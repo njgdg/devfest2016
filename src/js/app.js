@@ -78,7 +78,7 @@ $(document).ready(function(){
     $screen1Inner.css('background-color', 'rgba(0,0,0,'+ st/s2H +')');
     if (st >= s2H) {
       $body.css('background-image', 'url('+ img2Url +')');
-      $screen3Inner.css('background-color', 'rgba(0,0,0,'+ (st-winH-s2H)/winH +')');
+      // $screen3Inner.css('background-color', 'rgba(0,0,0,'+ ((st-winH-s2H)/winH - 0.) +')');
     } else {
       $body.css('background-image', 'url('+ img1Url +')');
     }
@@ -87,4 +87,9 @@ $(document).ready(function(){
 
   // 地图
   initMap();
+
+  window.scrollToScreen = function(id) {
+    $.scrollTo('#' + id, 600);
+    return false;
+  }
 });
