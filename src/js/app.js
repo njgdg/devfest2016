@@ -9,9 +9,11 @@ $(document).ready(function(){
   var $screen3Inner = $screen3.children();
   var $screen2 = $('#S2');
   var s2H = $screen2.height();
-  var $preload = $('.preload');
-  var img1Url = $preload.children()[0].src;
-  var img2Url = $preload.children()[1].src;
+  // var $preload = $('.preload');
+  // var img1Url = $preload.children()[0].src;
+  // var img2Url = $preload.children()[1].src;
+  var banner0 = $('.banner-0');
+  var banner1 = $('.banner-1');
 
   function initMap (data) {
     if (!data) {
@@ -31,7 +33,7 @@ $(document).ready(function(){
     var mapObj=new AMap.Map("Map",{
       view: new AMap.View2D({
         center:lnglat,
-        zoom:13,
+        zoom:15,
         rotation:0
       }),
       lang:"zh_cn",
@@ -58,29 +60,15 @@ $(document).ready(function(){
     });
     inforWindow.open(mapObj,marker.getPosition());
   }
-  // 滚屏
-  // $doc.on('scroll', function(e){
-  //   var st = $doc.scrollTop();
-  //   $screen1.css('background-position', 'center ' + Math.floor(st/2) + 'px');
-  //   $screen1Inner.css('background-color', 'rgba(0,0,0,'+ st/winH +')');
-  //   if (st >= winH + s2H) {
-  //     $screen3.css('background-position', 'center ' + Math.floor(st - winH - s2H)/1.5 + 'px');
-  //     $screen3Inner.css('background-color', 'rgba(0,0,0,'+ (st-winH-s2H)/winH +')');
-  //   } else {
-  //     $screen3.css('background-position', 'center 0');
-  //   }
-  //   e.preventDefault();
-  // });
 
-  $body.css('background-image', 'url('+ img1Url +')');
   $doc.on('scroll', function(e){
     var st = $doc.scrollTop();
-    $screen1Inner.css('background-color', 'rgba(0,0,0,'+ st/s2H +')');
-    if (st >= s2H) {
-      $body.css('background-image', 'url('+ img2Url +')');
-      // $screen3Inner.css('background-color', 'rgba(0,0,0,'+ ((st-winH-s2H)/winH - 0.) +')');
+    if (st >= winH) {
+      banner0.css('visibility', 'hidden');
+      banner1.css('visibility', 'visible');
     } else {
-      $body.css('background-image', 'url('+ img1Url +')');
+      banner0.css('visibility', 'visible');
+      banner1.css('visibility', 'hidden');
     }
     e.preventDefault();
   });
@@ -88,8 +76,14 @@ $(document).ready(function(){
   // 地图
   initMap();
 
-  window.scrollToScreen = function(id) {
+  // window.scrollToScreen = function(id) {
+  //   $.scrollTo('#' + id, 600);
+  //   return false;
+  // }
+
+  $('ul.nav').find('a').on('click', function(){
+    var id = $(this).data('s');
     $.scrollTo('#' + id, 600);
     return false;
-  }
+  });
 });
